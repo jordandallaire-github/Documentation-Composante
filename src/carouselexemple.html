@@ -1,0 +1,234 @@
+{% include '_partials/_header.html' %}
+
+<nav>
+    <ul class="sous_header">
+        <li>
+            <a href="carousel.html" class="back">Retour</a>
+        </li>
+        <li><a href="#défaut">Défaut</a></li>
+        <li><a href="#split">Split</a></li>
+        <li><a href="#trio">Trio</a></li>
+        <li><a href="#autoplay">Autoplay</a></li>
+        <li><a href="#loop">Loop</a></li>
+        <li><a href="#gap">Gap</a></li>
+    </ul>
+</nav>
+
+<section id="défaut">
+    <div class="wrapper">
+        <h2>Carousel par défaut</h2>
+        <div class="swiper" data-component="Carousel">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <details>
+            <script type="text/plain" class="language-markup">
+                # HTML
+                <!-- Slider main container -->
+                <div class="swiper" data-component="Carousel">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </script>
+        </details>
+    </div>
+</section>
+
+<section id="split">
+    <div class="wrapper">
+        <h2>Carousel avec variant split</h2>
+        <div class="swiper" data-component="Carousel" data-variant="split">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <details>
+            <script type="text/plain" class="language-markup">
+                # HTML
+                <!-- Slider main container -->
+                <div class="swiper" data-component="Carousel" data-variant="split">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </script>
+        </details>
+    </div>
+</section>
+
+<section id="trio">
+    <div class="wrapper">
+        <h2>Carousel avec variant trio</h2>
+        <div class="swiper" data-component="Carousel" data-variant="trio">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <details>
+            <script type="text/plain" class="language-markup">
+                # HTML
+                <!-- Slider main container -->
+                <div class="swiper" data-component="Carousel" data-variant="trio">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </script>
+        </details>
+    </div>
+</section>
+
+<section id="autoplay">
+    <div class="wrapper">
+        <h2>Carousel avec paramètre autoplay</h2>
+        <div class="swiper" data-component="Carousel" data-autoplay="">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <details>
+            <script type="text/plain" class="language-markup">
+                # HTML
+                <!-- Slider main container -->
+                <div class="swiper" data-component="Carousel" data-autoplay="">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </script>
+        </details>
+    </div>
+</section>
+
+<section id="loop">
+    <div class="wrapper">
+        <h2>Carousel avec paramètre loop</h2>
+        <div class="swiper" data-component="Carousel" data-variant="split" data-loop="true">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <details>
+            <script type="text/plain" class="language-markup">
+                # HTML
+                <!-- Slider main container -->
+                <div class="swiper" data-component="Carousel" data-variant="split" data-loop="true">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </script>
+        </details>
+    </div>
+</section>
+
+<section id="gap">
+    <div class="wrapper">
+        <h2>Carousel avec paramètre gap</h2>
+        <div class="swiper" data-component="Carousel" data-variant="split" data-gap="">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <details>
+            <script type="text/plain" class="language-markup">
+                # HTML
+                <!-- Slider main container -->
+                <div class="swiper" data-component="Carousel" data-variant="split" data-gap="">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </script>
+        </details>
+    </div>
+</section>

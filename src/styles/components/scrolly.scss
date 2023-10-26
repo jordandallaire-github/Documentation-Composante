@@ -1,0 +1,76 @@
+/* ==========================================================================
+   scrolly / component
+   ========================================================================== */
+
+.has-js {
+    [data-scrolly='fromBottom'] {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='fromLeft'] {
+        opacity: 0;
+        transform: translateX(-60px);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='fromRight'] {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='fromTop'] {
+        opacity: 0;
+        transform: translateY(-300px);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='Scale'] {
+        opacity: 0;
+        transform: scale(0.5);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    [data-scrolly='Rotation'] {
+        opacity: 0;
+        transform: rotateX(200deg);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotateX(0deg);
+        }
+    }
+}
+
+i {
+    font-size: 1rem;
+    font-weight: bold;
+}

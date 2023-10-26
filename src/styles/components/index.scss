@@ -1,0 +1,15 @@
+.menu_index {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    list-style: none;
+
+    a:hover {
+        color: var(--color-bg-secondary);
+    }
+}
+
+section {
+    padding-top: 10px;
+}

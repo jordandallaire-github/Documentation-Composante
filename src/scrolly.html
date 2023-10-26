@@ -1,0 +1,259 @@
+{% include '_partials/_header.html' %}
+
+<nav>
+    <ul class="sous_header">
+        <li>
+            <a href="index.html" class="back">Retour</a>
+        </li>
+        <li><a href="#utilisation">Utilisations</a></li>
+        <li><a href="#animation">Animations</a></li>
+        <li><a href="#parametre">Paramètres</a></li>
+        <li><a href="#autres">Autre utilisation</a></li>
+    </ul>
+</nav>
+
+<section>
+    <div class="wrapper">
+        <h1 id="intro">Scrolly</h1>
+        <p>
+            La composante Scrolly est un outil permettant de créer des animations d'apparition ou de disparition
+            d'éléments lorsqu'ils deviennent visibles dans la fenêtre du navigateur.
+        </p>
+
+        <section>
+            <h2>Comment l'utiliser</h2>
+            <p>
+                Pour utiliser cette composante, il faut ajouter le data-component Scrolly sur le body. Ensuite, il faut
+                ajouter des éléments avec l'attribut "data-scrolly" pour indiquer quel type d'animation doit être
+                appliqué à l'élément.
+            </p>
+            <script type="text/plain" class="language-markup">
+                    # HTML
+                <body data-component="Scrolly">
+                    <div>
+                        <h1 data-scrolly="fromBottom">Titre animé</h1>
+                        <p data-scrolly="fromLeft">Paragraphe animé</p>
+                    </div>
+                </body>
+            </script>
+            <p>Dans la structure TimTools, la ComponentFactory s'occupe de l'instantiation des composantes.</p>
+            <script type="text/plain" class="language-scss">
+                # JS
+                new ComponentFactory()
+            </script>
+
+            <a class="demo" href="componentfactory.html" target="_blank">Voir la componentFactory</a>
+        </section>
+
+        <section id="animation">
+            <h2>Les animations</h2>
+            <p>
+                Pour les animations, c'est à vous de determiner le type d'animation que vous voulez. Les exemples
+                si-dessous sont pour vous montrer des exemples d'animations que vous pouriez utiliser ou en faire une
+                nouvelle, ceux-ci sont fromLeft, fromBottom, fromRight, fromTop, scale, rotation.
+            </p>
+
+            <i>
+                À notez que la classe .has js ajouter par le script, est nécessaire pour englober tout le code scss de
+                la composante pour assurez le fonctionnement de votre site même si le code js n'embarque pas
+            </i>
+
+            <section>
+                <h3>fromLeft</h3>
+                <p>Animation qui fait arriver le contenu vers la gauche</p>
+
+                <script type="text/plain" class="language-scss">
+                    # SCSS
+                    .has-js{
+                        [data-scrolly='fromLeft'] {
+                            opacity: 0;
+                            transform: translateX(-60px);
+                            transition: all 0.4s ease-out;
+
+                            &.is-active {
+                                opacity: 1;
+                                transform: translateX(0);
+                            }
+                        }
+                    }
+                </script>
+                <a class="demo" href="scrollyexemple.html#left">Voir un démo de l'animation fromLeft</a>
+            </section>
+
+            <section>
+                <h3>fromRight</h3>
+                <p>Animation qui fait arriver le contenu vers la droite</p>
+
+                <script type="text/plain" class="language-scss">
+                    # SCSS
+                    .has-js{
+                        [data-scrolly='fromRight'] {
+                            opacity: 0;
+                            transform: translateX(60px);
+                            transition: all 0.4s ease-out;
+
+                            &.is-active {
+                                opacity: 1;
+                                transform: translateX(0);
+                            }
+                        }
+                    }
+                </script>
+                <a class="demo" href="scrollyexemple.html#right">Voir un démo de l'animation fromRight</a>
+            </section>
+
+            <section>
+                <h3>fromBottom</h3>
+                <p>Animation qui fait arriver le contenu vers le bas</p>
+
+                <script type="text/plain" class="language-scss">
+                    # SCSS
+                    .has-js{
+                        [data-scrolly='fromBottom'] {
+                            opacity: 0;
+                            transform: translateY(60px);
+                            transition: all 0.4s ease-out;
+
+                            &.is-active {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                </script>
+                <a class="demo" href="scrollyexemple.html#bottom">Voir un démo de l'animation fromBottom</a>
+            </section>
+
+            <section>
+                <h3>fromTop</h3>
+                <p>Animation qui fait arriver le contenu vers le haut</p>
+
+                <script type="text/plain" class="language-scss">
+                    # SCSS
+                    .has-js{
+                        [data-scrolly='fromTop'] {
+                            opacity: 0;
+                            transform: translateX(-300px);
+                            transition: all 0.4s ease-out;
+
+                            &.is-active {
+                                opacity: 1;
+                                transform: translateX(0);
+                            }
+                        }
+                    }
+                </script>
+                <a class="demo" href="scrollyexemple.html#top">Voir un démo de l'animation fromTop</a>
+            </section>
+
+            <section>
+                <h3>Scale</h3>
+                <p>Animation qui fait arriver le contenu en le grossisant</p>
+
+                <script type="text/plain" class="language-scss">
+                    # SCSS
+                    .has-js{
+                        [data-scrolly='Scale'] {
+                            opacity: 0;
+                            transform: scale(0.5);
+                            transition: all 0.4s ease-out;
+
+                            &.is-active {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                </script>
+                <a class="demo" href="scrollyexemple.html#scale">Voir un démo de l'animation scale</a>
+            </section>
+
+            <section>
+                <h3>Rotation</h3>
+                <p>Animation qui fait arriver le contenu en le fesant tourner</p>
+
+                <script type="text/plain" class="language-scss">
+                    # SCSS
+                    .has-js{
+                        [data-scrolly='Rotation'] {
+                            opacity: 0;
+                            transform: rotateX(200deg);
+                            transition: all 0.4s ease-out;
+
+                            &.is-active {
+                                opacity: 1;
+                                transform: rotateX(0deg);
+                            }
+                        }
+                    }
+                </script>
+                <a class="demo" href="scrollyexemple.html#rotation">Voir un démo de l'animation rotation</a>
+            </section>
+
+            <section>
+                <h3>Votre propre animation</h3>
+
+                <p>
+                    Pour ajouter vos propre animation il faut ajouter dans le scss le nom data-scrolly avec le nom de
+                    votre animation et l'ajouter dans le html. Ensuite vous pouvez vous amusez :)
+                </p>
+                <script type="text/plain" class="language-scss">
+                    # SCSS
+                    .has-js{
+                        [data-scrolly='leNomDeVotreAnimation'] {
+                            opacity: 0;
+                            transform: rotateX(200deg);
+                            transition: all 0.4s ease-out;
+
+                            &.is-active {
+                                opacity: 1;
+                                transform: rotateX(0deg);
+                            }
+                        }
+                    }
+                </script>
+
+                <script type="text/plain" class="language-scss">
+                    # HTML
+                    <body data-component="Scrolly">
+                        <div>
+                            <h1 data-scrolly="leNomDeVotreAnimation">Titre animé</h1>
+                            <p data-scrolly="leNomDeVotreAnimation">Paragraphe animé</p>
+                        </div>
+                    </body>
+                </script>
+            </section>
+        </section>
+
+        <section id="parametre">
+            <h2>Paramètre</h2>
+            <p>
+                Le paramètre noRepeat permet de spécifier que l'animation ne doit être déclenchée qu'une seule fois.
+                Cela permet d'éviter de répéter l'animation plusieurs fois et d'améliorer les performances du site. Pour
+                cela il faut rajouter le data-no-repeat à l’endroit souhaité.
+            </p>
+
+            <script type="text/plain" class="language-scss">
+                # HTML
+                <article class="card" data-scrolly="Scale" data-no-repeat="">1</article>
+            </script>
+
+            <a class="demo" href="scrollyexemple.html#repeat">Voir un démo du paramètre noRepeat</a>
+        </section>
+
+        <section id="autres">
+            <h2>Comment l'utiliser en dehors de TimTools</h2>
+            <p>
+                À l'intérieur d'un fichier JavaScript, importez la classe `Scrolly` que vous aurez préalablement intégré
+                à votre projet.
+            </p>
+            <script type="text/plain" class="language-scss">
+                import Scrolly from './Scrolly';
+                new Scrolly(element);
+            </script>
+            <p>Dans l'exemple ci-dessus, element est égal au HTMLElement qui l'attribut data-component="Scrolly"</p>
+        </section>
+    </div>
+</section>
+
+{% include '_partials/_footer.html' %}

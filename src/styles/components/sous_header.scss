@@ -1,0 +1,22 @@
+.sous_header {
+    background: var(--color-primary);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    padding: 40px;
+    list-style: none;
+    transition: all 0.4s $ease-out-expo;
+
+    a {
+        color: var(--color-bg-primary);
+        width: fit-content;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+    }
+}

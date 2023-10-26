@@ -1,0 +1,73 @@
+{% include '_partials/_header.html' %}
+
+<nav>
+    <ul class="sous_header">
+        <li>
+            <a href="index.html" class="back">Retour</a>
+        </li>
+        <li><a href="#creation">Création d'une composante</a></li>
+        <li><a href="#ajout">Ajout d'une composante</a></li>
+    </ul>
+</nav>
+
+<section>
+    <div class="wrapper">
+        <h1>
+            Component
+            <br />
+            Factory
+        </h1>
+        <p>
+            Cette composante permet d'instancier toute les composantes utilisées dans un projet en un seul fichier
+            JavaScript
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="wrapper">
+        <h2 id="creation">Création d'une composante</h2>
+        <p>
+            Pour créer une nouvelle composante importez le/s classe composante que vous aurez préalablement intégré à
+            votre projet. Dans cette exemple la composante sera Carousel
+        </p>
+
+        <script type="text/plain" class="language-scss">
+            import Carousel from './components/Carousel';
+            if (this.componentList[componentName]) {
+                new this.componentList[componentName](element);
+              }
+        </script>
+
+        <p>
+            Dans l'exemple ci-dessus, On vérifie s'il y a bien un nom de composante dans componentList,componentName est
+            le nom de la composante qui est Carousel, element est égal au HTMLElement qui ont l'attribut data-component
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="wrapper">
+        <h2 id="ajout">Ajout d'une composante</h2>
+        <p>
+            Pour ajouter une nouvelle composante importez le/s classe composante que vous aurez préalablement intégré à
+            votre projet. Dans cette exemple la composante sera Carousel
+        </p>
+
+        <script type="text/plain" class="language-scss">
+            import Carousel from './components/Carousel';
+        </script>
+
+        <p>Allez dans componentList et ajouter le nom de la composante a l'intérieur de celle-ci</p>
+
+        <script type="text/plain" class="language-scss">
+            this.componentList = {
+                Carousel,
+              };
+        </script>
+
+        <p>Le reste du code fera le reste du travaille pour la composante :)</p>
+    </div>
+</section>
+
+{% include '_partials/_footer.html' %}
